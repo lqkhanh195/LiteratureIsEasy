@@ -1,9 +1,8 @@
-from langchain_cohere import ChatCohere
 from langchain import hub
 
 class Generator:
-    def __init__(self):
-        self.llm = ChatCohere()
+    def __init__(self, llm):
+        self.llm = llm
         self.prompt = hub.pull("rlm/rag-prompt")
 
     def parse_output(self, output):
@@ -14,5 +13,4 @@ class Generator:
                  "question": query}
 
         rag_chain = self.prompt | self.llm | self.parse_output
-
         return rag_chain.invoke(input) 
