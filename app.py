@@ -66,7 +66,7 @@ def main():
 
         prompt = st.chat_input("Nhập câu hỏi của bạn tại đây")
 
-        if st.session_state.hist != [] and prompt is not None and prompt.strip != "":
+        if prompt is not None and prompt.strip != "":
             st.session_state.hist.append(
                 {
                     "role": "user",
