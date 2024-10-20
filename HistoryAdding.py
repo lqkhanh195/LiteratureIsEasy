@@ -5,7 +5,6 @@ class HistoryAdder:
     def __init__(self, llm):
         self.llm = llm
 
-    def set_up_prompt(self):
         contextualize_q_system_prompt = (
             "Given a chat history and the latest user question "
             "which might reference context in the chat history, "
@@ -23,9 +22,6 @@ class HistoryAdder:
         )
 
     def get_hist_context(self, chat_history, input):
-        if chat_history == []:
-            self.set_up_prompt()
-        print(chat_history)
         chain = self.prompt | self.llm | StrOutputParser()
 
         return chain.invoke({"input": input, "chat_history": chat_history})

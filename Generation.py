@@ -11,6 +11,6 @@ class Generator:
     def generate_answer(self, rel_docs, query):
         input = {"context": "\n\n".join(doc.page_content for doc in rel_docs),
                  "question": query}
-
+        
         rag_chain = self.prompt | self.llm | self.parse_output
         return rag_chain.invoke(input) 
