@@ -35,7 +35,8 @@ to test it at port 5001 of your localhost.
 After running all these things, you will need to upload a file(only support txt file for now). Then simply type your question into the chat input box and wait for the answer. You can use some test documents that i provided on the test_data folder to test this project.
 
 ## Further improvements:
-_ Add more MLOps components.
-_ Solve the limit tokens problem.
-_ Manage uploaded documents so user can upload multiple files, remove file also remove data in vectorstore.
-_ Try more advanced RAG techniques
+_ Add more MLOps components.  
+_ Solve the limit tokens problem.  
+_ Manage uploaded documents so user can upload multiple files, remove file also remove data in vectorstore.  
+_ Try more advanced RAG techniques  
+  
