@@ -39,4 +39,5 @@ _ Add more MLOps components.
 _ Solve the limit tokens problem.  
 _ Manage uploaded documents so user can upload multiple files, remove file also remove data in vectorstore.  
 _ Try more advanced RAG techniques  
+_ Add web scraping for more context.  
   
